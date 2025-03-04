@@ -22,15 +22,18 @@ for language in languages:
     urls.append(url)
     print("Appended url")
 
-md_file = "# List of the most popular programming languages in the world"
-
+md_file = """---
+title: Most popular porgramming languages
+permalink: /docs/
+---\n"""
+md_file += "# List of the most popular programming languages in the world"
 for i in range(len(languages)):
     md_file += f"\n- # {languages[i]} ![image]({imgs[i]})"
     md_file += f"\n     - Percentage of popularity: {percentage[i]}"
 
 
 # print(md_file)
-with open("page.md", "w") as file:
+with open("docs/index.md", "w") as file:
     file.write(md_file)
 
 print("File written")
