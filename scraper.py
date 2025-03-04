@@ -23,9 +23,10 @@ for language in languages:
     print("Appended url")
 
 md_file = """---
+title: Most popular programming languages
 permalink: /docs/
 ---\n"""
-md_file += "# List of the most popular programming languages in the world"
+
 for i in range(len(languages)):
     md_file += f"\n- # {languages[i]} ![image]({imgs[i]})"
     md_file += f"\n     - Percentage of popularity: {percentage[i]}"

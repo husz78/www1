@@ -1,4 +1,3 @@
-# List of the most popular programming languages in the world
 - # Python ![image](www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png)
      - Percentage of popularity: 23.88%
 - # C++ ![image](www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C__.png)
