@@ -23,7 +23,6 @@ for language in languages:
     print("Appended url")
 
 md_file = """---
-title: Most popular porgramming languages
 permalink: /docs/
 ---\n"""
 md_file += "# List of the most popular programming languages in the world"

@@ -1,5 +1,4 @@
 ---
-title: Most popular porgramming languages
 ---
 
 # List of the most popular programming languages in the world
