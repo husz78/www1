@@ -24,7 +24,6 @@ for language in languages:
 
 md_file = """---
 title: Most popular programming languages
-permalink: /docs/
 ---\n"""
 
 for i in range(len(languages)):

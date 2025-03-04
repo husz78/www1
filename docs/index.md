@@ -1,6 +1,5 @@
 ---
 title: Most popular programming languages
-permalink: /docs/
 ---
 
 - # Python ![image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png)
