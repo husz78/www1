@@ -1,5 +1,6 @@
 ---
 title: Most popular programming languages
+layout: default
 ---
 
 # List of the most popular programming languages in the world
