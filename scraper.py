@@ -11,7 +11,7 @@ soup = BeautifulSoup(content, 'html.parser')
 
 table = soup.table.tbody
 tds_with_img = table.find_all('td', class_="td-top20")
-imgs = ["www.tiobe.com" + td.img.get("src") for td in tds_with_img]
+imgs = ["https://www.tiobe.com" + td.img.get("src") for td in tds_with_img]
 td_languages = [td.next_sibling for td in tds_with_img]
 percentage = [language.next_sibling.text for language in td_languages]
 languages = [x.text for x in td_languages]
