@@ -27,7 +27,7 @@ title: Most popular programming languages
 ---\n"""
 
 for i in range(len(languages)):
-    md_file += f"\n- # {languages[i]} ![image]({imgs[i]})"
+    md_file += f"\n- # [{languages[i]} ![image]({imgs[i]})]({urls[i]})"
     md_file += f"\n     - Percentage of popularity: {percentage[i]}"
 
 
