@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from googlesearch import search
-import os
+import time
 
 
 response = requests.get("https://www.tiobe.com/tiobe-index/")
@@ -21,8 +21,10 @@ languages = [x.text.strip() for x in td_languages]
 
 urls = []
 for language in languages:
+    time.sleep(3)
     url = list(search(language, stop=1))[0]
     urls.append(url)
+    print("Appended url")
 
 md_file = """---
 title: Most Popular Programming Languages
@@ -32,7 +34,7 @@ title: Most Popular Programming Languages
 for i in range(len(languages)):
     md_file += f"## {languages[i]}\n"
     md_file += f"![{languages[i]}]({imgs[i]})\n"
-    md_file += f"[Learn more about {languages[i]}]({urls[i]})\n"
+    md_file += f"- [Learn more about {languages[i]}]({urls[i]})\n"
     md_file += f"- **Percentage of popularity:** {percentages[i]}\n\n"
 
 # Save as index.md inside 'docs' folder
