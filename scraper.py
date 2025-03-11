@@ -28,7 +28,6 @@ for language in languages:
 
 md_file = ""
 
-"""
 for i in range(len(languages)):
     md_file += f"## {languages[i]}\n"
     md_file += f"![{languages[i]}]({imgs[i]})\n"
