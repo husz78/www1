@@ -26,9 +26,7 @@ for language in languages:
     urls.append(url)
     print("Appended url")
 
-md_file = """---
-title: Most Popular Programming Languages
----
+md_file = ""
 
 """
 for i in range(len(languages)):
