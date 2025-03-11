@@ -1,6 +1,3 @@
----
-title: Most Popular Programming Languages
----
 
 ## Python
 ![Python](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png)
