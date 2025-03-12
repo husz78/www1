@@ -1,6 +1,6 @@
 ## Python
 ![Python](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png)
-- [Learn more about Python](/www1/Python)
+- [Learn more about Python](/Python)
 - **Percentage of popularity:** 23.85%
 
 ## C++
