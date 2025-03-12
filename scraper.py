@@ -31,7 +31,7 @@ md_file = ""
 for i in range(len(languages)):
     md_file += f"## {languages[i]}\n"
     md_file += f"![{languages[i]}]({imgs[i]})\n"
-    md_file += f"- [Learn more about {languages[i]}](/www/{languages[i]})\n"
+    md_file += f"- [Learn more about {languages[i]}](/www1/{languages[i]})\n"
     md_file += f"- **Percentage of popularity:** {percentages[i]}\n\n"
 
 md_subpages = []
