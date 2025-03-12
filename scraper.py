@@ -14,10 +14,10 @@ soup = BeautifulSoup(content, 'html.parser')
 table = soup.table.tbody
 tds_with_img = table.find_all('td', class_="td-top20")
 
-imgs = ["https://www.tiobe.com" + td.img.get("src") for td in tds_with_img]
-td_languages = [td.next_sibling for td in tds_with_img]
-percentages = [language.next_sibling.text for language in td_languages]
-languages = [x.text.strip() for x in td_languages]
+imgs = ["https://www.tiobe.com" + td.img.get("src") for td in tds_with_img][:8]
+td_languages = [td.next_sibling for td in tds_with_img][:8]
+percentages = [language.next_sibling.text for language in td_languages][:8]
+languages = [x.text.strip().replace("/", "-") for x in td_languages][:8]
 
 urls = []
 for language in languages:
@@ -39,11 +39,12 @@ md_subpages = []
 for i in range(len(languages)):
     subpage = "---\n"
     subpage += f"permalink: {languages[i]}\n"
-    subpage = "---"
+    subpage += "---"
     subpage += f"## {languages[i]}\n"
     subpage += f"{languages[i]}'s popularity in the whole world is {percentages[i]}"
-    subpage += f"If you want to see more about python click [here]({urls[i]})\n"
-    with open(f"docs/{languages[i]}", "w", encoding="utf-8") as file:
+    subpage += f"If you want to see more about python click [here](/{languages[i]})\n"
+    filename = f"docs/{languages[i]}.md"
+    with open(filename, "w") as file:
         file.write(subpage)
 
 # Save as index.md inside 'docs' folder
