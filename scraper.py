@@ -39,7 +39,7 @@ md_subpages = []
 for i in range(len(languages)):
     subpage = "---\n"
     subpage += f"permalink: {languages[i]}\n"
-    subpage += "---"
+    subpage += "---\n"
     subpage += f"## {languages[i]}\n"
     subpage += f"{languages[i]}'s popularity in the whole world is {percentages[i]}"
     subpage += f"If you want to see more about python click [here](/{languages[i]})\n"
