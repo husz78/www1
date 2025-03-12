@@ -31,7 +31,7 @@ md_file = ""
 for i in range(len(languages)):
     md_file += f"## {languages[i]}\n"
     md_file += f"![{languages[i]}]({imgs[i]})\n"
-    md_file += f"- [Learn more about {languages[i]}](/{languages[i]})\n"
+    md_file += f"- [Learn more about {languages[i]}](/www/{languages[i]})\n"
     md_file += f"- **Percentage of popularity:** {percentages[i]}\n\n"
 
 md_subpages = []
@@ -42,7 +42,7 @@ for i in range(len(languages)):
     subpage += "---\n"
     subpage += f"## {languages[i]}\n"
     subpage += f"{languages[i]}'s popularity in the whole world is {percentages[i]}"
-    subpage += f"If you want to see more about python click [here](/{languages[i]})\n"
+    subpage += f"[If you want to see more about python click here]({urls[i]}])\n"
     filename = f"docs/{languages[i]}.md"
     with open(filename, "w") as file:
         file.write(subpage)
